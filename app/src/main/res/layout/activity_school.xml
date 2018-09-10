@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".SchoolActivity">
+
+	<LinearLayout
+		android:padding="8dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<EditText
+			android:id="@+id/etStudentName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="@string/ucenik_ime"
+			android:inputType="textPersonName" />
+
+		<EditText
+			android:id="@+id/etStudentSurname"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="@string/ucenik_prezime"
+			android:inputType="textPersonName" />
+
+		<EditText
+			android:id="@+id/etStudentActivity"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:hint="@string/ucenik_aktivnost"
+			android:inputType="textMultiLine" />
+
+		<EditText
+			android:id="@+id/etStudentInstallment"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignEnd="@+id/lvStudents"
+			android:layout_alignParentBottom="true"
+			android:ems="10"
+			android:hint="@string/ucenik_rata"
+			android:inputType="textPersonName" />
+
+		<Button
+			android:id="@+id/btnAddStudent"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="Dodaj Učenika" />
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/lvStudents"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true" />
+</LinearLayout>

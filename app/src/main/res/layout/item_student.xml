@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:id="@+id/imeNaListi"
+        android:id="@+id/itemName"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,29 +16,29 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/aktivnostNaListi"
+        android:id="@+id/itemActivity"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imeNaListi"
+        android:layout_alignTop="@+id/itemName"
         android:layout_marginEnd="56dp"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/prezimeNaListi"
+        android:id="@+id/itemSurname"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/imeNaListi"
+        android:layout_alignTop="@+id/itemName"
         android:layout_marginStart="120dp"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/rataNaListi"
+        android:id="@+id/itemInstallment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imeNaListi"
+        android:layout_alignTop="@+id/itemName"
         android:layout_marginEnd="11dp"
         android:text="TextView" />
 </RelativeLayout>

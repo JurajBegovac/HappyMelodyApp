@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<Button
+		android:id="@+id/gracani"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="158dp"
+		android:text="@string/gracani" />
+
+	<Button
+		android:id="@+id/markusevec"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="175dp"
+		android:text="@string/markusevac" />
+
+	<Button
+		android:id="@+id/mioc"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="304dp"
+		android:text="@string/MIOC" />
+
+	<Button
+		android:id="@+id/srebrnjak"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="42dp"
+		android:text="@string/Srebrnjak" />
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="221dp"
+		android:layout_height="129dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="13dp"
+		android:gravity="center_horizontal"
+		android:text="@string/skola_stranih_jezika_tekst"
+
+		android:textSize="30sp"
+		android:textStyle="bold" />
+
+</RelativeLayout>

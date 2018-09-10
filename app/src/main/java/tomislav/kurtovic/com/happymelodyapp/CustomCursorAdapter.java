@@ -8,36 +8,35 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
+import tomislav.kurtovic.com.happymelodyapp.db.HappyMelodyDbContract.StudentEntry;
+
 public class CustomCursorAdapter extends CursorAdapter {
 
+	public CustomCursorAdapter(Context context, Cursor c) {
+		super(context, c, 0);
+	}
 
-    public CustomCursorAdapter(Context context, Cursor c, int flags) {
-        super(context, c, 0);
-    }
+	@Override
+	public View newView(Context context, Cursor cursor, ViewGroup parent) {
+		return LayoutInflater.from(context).inflate(R.layout.item_student, parent, false);
+	}
 
-    @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return LayoutInflater.from(context).inflate(R.layout.custom_listview,parent,false);
-    }
+	@Override
+	public void bindView(View view, Context context, Cursor cursor) {
 
+		TextView tvName = view.findViewById(R.id.itemName);
+		TextView tvSurname = view.findViewById(R.id.itemSurname);
+		TextView tvActivity = view.findViewById(R.id.itemActivity);
+		TextView tvInstallment = view.findViewById(R.id.itemInstallment);
 
-    @Override
-    public void bindView(View view, Context context, Cursor cursor) {
+		String name = cursor.getString(cursor.getColumnIndexOrThrow(StudentEntry.COLUMN_NAME));
+		String surname = cursor.getString(cursor.getColumnIndexOrThrow(StudentEntry.COLUMN_SURNAME));
+		String activity = cursor.getString(cursor.getColumnIndexOrThrow(StudentEntry.COLUMN_ACTIVITY));
+		String installment = cursor.getString(cursor.getColumnIndexOrThrow(StudentEntry.COLUMN_INSTALLMENT));
 
-        TextView ime = view.findViewById(R.id.imeNaListi);
-        TextView prezime = view.findViewById(R.id.prezimeNaListi);
-        TextView aktivnost = view.findViewById(R.id.aktivnostNaListi);
-        TextView rata = view.findViewById(R.id.rataNaListi);
-
-        String imeUcenika = cursor.getString(cursor.getColumnIndexOrThrow("ime"));
-        String prezimeUcenika = cursor.getString(cursor.getColumnIndexOrThrow("prezime"));
-        String aktivnostUcenika = cursor.getString(cursor.getColumnIndexOrThrow("aktivnost"));
-        String rataUcenika = cursor.getString(cursor.getColumnIndexOrThrow("rata"));
-
-        ime.setText(imeUcenika);
-        prezime.setText(prezimeUcenika);
-        aktivnost.setText(aktivnostUcenika);
-        rata.setText(rataUcenika);
-
-    }
+		tvName.setText(name);
+		tvSurname.setText(surname);
+		tvActivity.setText(activity);
+		tvInstallment.setText(installment);
+	}
 }
